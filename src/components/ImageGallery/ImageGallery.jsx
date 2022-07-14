@@ -1,11 +1,21 @@
-import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
+import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
+import { ImgGallery } from './ImageGallery.styled';
 
 const ImageGallery = () => (
-    <>
-    <ul class="gallery">
-  <ImageGalleryItem />
-</ul></>
+  <ImgGallery>
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+    <ImageGalleryItem />
+  </ImgGallery>
 );
-
 
 export default ImageGallery;

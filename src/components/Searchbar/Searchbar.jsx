@@ -1,22 +1,23 @@
+import { SearchbarContainer,SearchForm,SearchFormButton,SearchFormButtonLabel,SearchFormInput } from './Searchbar.styled';
+
 const Searchbar = () => (
-    <>
-        <header class="searchbar">
-  <form class="form">
-    <button type="submit" class="button">
-      <span class="button-label">Search</span>
-    </button>
+  <>
+    <SearchbarContainer>
+      <SearchForm>
+        <SearchFormButton type="submit">
+          <SearchFormButtonLabel>Search</SearchFormButtonLabel>
+        </SearchFormButton>
 
-    <input
-      class="input"
-      type="text"
-      autocomplete="off"
-      autofocus
-      placeholder="Search images and photos"
-    />
-  </form>
-</header>
-    </>
+        <SearchFormInput
+          
+          type="text"
+          autocomplete="off"
+          autofocus
+          placeholder="Search images and photos"
+        />
+      </SearchForm>
+    </SearchbarContainer>
+  </>
 );
-
 
 export default Searchbar;

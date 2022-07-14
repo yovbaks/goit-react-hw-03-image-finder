@@ -1,30 +1,26 @@
-import Searchbar from "./Searchbar/Searchbar";
-import ImageGallery from "./ImageGallery/ImageGallery";
-import Button from "./Button/Button";
-import Loader from "./Loader/Loader";
-import Modal from "./Modal/Modal";
+import Searchbar from './Searchbar/Searchbar';
+import ImageGallery from './ImageGallery/ImageGallery';
+import Button from './Button/Button';
+// import Modal from './Modal/Modal';
+import { Bars } from 'react-loader-spinner';
+
+import { AppContainer } from './App.styled';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <Searchbar />
-      <Loader/>
-      <ImageGallery />
-      
-      <Button />
-      <Modal/>
-      
-      
-    
+    <div>
+      <AppContainer>
+        <Searchbar />
+        <Bars
+          heigth="100"
+          width="100"
+          color="grey"
+          ariaLabel="loading-indicator"
+        />
+        <ImageGallery />
+        <Button />
+        {/* <Modal /> */}
+      </AppContainer>
     </div>
   );
 };
