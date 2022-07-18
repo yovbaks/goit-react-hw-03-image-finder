@@ -13,3 +13,10 @@ export const ImgGallery = styled.ul`
   margin-right: auto;
     
 `
+
+export const Notify = styled.div`
+display: grid;
+  max-width: calc(100vw - 48px);
+  margin-left: auto;
+  margin-right: auto;
+`

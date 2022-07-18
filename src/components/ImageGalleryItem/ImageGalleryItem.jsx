@@ -1,14 +1,21 @@
-import { ImgGalleryItem, ImgGalleryItemImg } from "./ImageGalleryItem.styled";
+import { ImgGalleryItem, ImgGalleryItemImg } from './ImageGalleryItem.styled';
+import { PropTypes } from 'prop-types';
 
+const ImageGalleryItem = ({ image: { webformatURL, tags, id }, onClick }) => {
+  return (
+    <>
+      <ImgGalleryItem onClick={onClick} data-id={id}>
+        <ImgGalleryItemImg src={webformatURL} alt={tags} />
+      </ImgGalleryItem>
+    </>
+  );
+};
 
-const ImageGalleryItem = () => (
-  <>
-    <ImgGalleryItem>
-      
-      <ImgGalleryItemImg src="" alt="" />
-      
-    </ImgGalleryItem>
-  </>
-);
+ImageGalleryItem.propTypes = {
+  webformatURL: PropTypes.string,
+  tags: PropTypes.array,
+  id: PropTypes.number,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default ImageGalleryItem;
